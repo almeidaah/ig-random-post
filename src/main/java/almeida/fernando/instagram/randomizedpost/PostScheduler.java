@@ -40,14 +40,19 @@ public class PostScheduler{
         InstagramSingleton.igUser = igUser;
         InstagramSingleton.igPass = igPassword;
 
-        InstagramSingleton.getInstance()
-                .getInstagram4j()
-                .sendRequest(
-                        new InstagramUploadPhotoRequest(f,
-                "Posted automatically at :" + LocalDateTime.now())
-                );
+        try {
 
-        logger.info("Image posted sucessfully at :" + LocalDateTime.now());
+            InstagramSingleton.getInstance()
+                    .getInstagram4j()
+                    .sendRequest(
+                            new InstagramUploadPhotoRequest(f,
+                                    "Posted automatically at :" + LocalDateTime.now())
+                    );
+
+            logger.info("Image posted sucessfully at :" + LocalDateTime.now());
+        }catch(Exception e){
+            postRandom();
+        }
     }
 
     private File fetchImageFromUrl(String urlToFetch) throws IOException {
