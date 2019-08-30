@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'almeida.fernando.instagram'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '12'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-quartz'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// https://mvnrepository.com/artifact/org.brunocvcunha.instagram4j/instagram4j
+	compile group: 'org.brunocvcunha.instagram4j', name: 'instagram4j', version: '1.12'
+
+	// https://mvnrepository.com/artifact/org.jsoup/jsoup
+	compile group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+
+	compile 'log4j:log4j:1.2.17'
+	compile 'commons-logging:commons-logging:1.2'
+}
