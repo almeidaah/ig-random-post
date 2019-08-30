@@ -1,7 +1,9 @@
-### H3 ig random picture poster
+Instagram random picture poster
 
-##### Just 4 fun. It fetches pictures in full hd resolution from [https://picsum.photos](https://picsum.photos)
+Just 4 fun. It fetches pictures in full hd resolution from [https://picsum.photos](https://picsum.photos)
 and post into some account.
+
+To define an account just override values on `application.properties` file.
 
 To check it running, just visit this instagram profile: https://www.instagram.com/instarandompicsjava/
 It posts one trully random picture each hour.
